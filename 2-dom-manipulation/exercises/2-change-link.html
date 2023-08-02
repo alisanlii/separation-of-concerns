@@ -38,6 +38,16 @@
         <script id="dom-manipulation-script">
           'use strict';
           debugger;
+          const actual = document.getElementById('actual');
+          const remove = actual.firstChild;
+          actual.removeChild(remove);
+
+          const aliModify = document.createElement('a');
+          aliModify.innerText = 'learn about badgers';
+
+          actual.replaceChild(aliModify, actual.firstChild);
+
+          aliModify.href = 'https://www.badgerbadgerbadger.com';
 
           // write me! (... without using cloneNode, that's kind of cheating)
         </script>

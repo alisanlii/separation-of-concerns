@@ -45,6 +45,20 @@
           'use strict';
           debugger;
 
+          const actualHeader = document.createElement('h1');
+          const actualText = document.createTextNode('a list of things');
+          actualHeader.appendChild(actualText);
+          const parentElement = document.getElementById('actual');
+          parentElement.insertBefore(actualHeader, parentElement.firstChild);
+
+          const actualOl = document.querySelector('#actual ol');
+
+          const actual = document.createElement('ul');
+          actual.innerHTML = `<li>robots</li>
+          <li>solar systems</li>
+          <li>oil</li>`;
+          actualOl.replaceWith(actual);
+
           // write me! (... without using cloneNode, that's kind of cheating)
         </script>
       </div>

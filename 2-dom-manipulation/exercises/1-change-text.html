@@ -35,6 +35,15 @@
           'use strict';
           debugger;
 
+          const actual = document.getElementById('actual');
+          const remove = actual.firstChild;
+          actual.removeChild(remove);
+
+          const aliModify = document.createElement('h1');
+          aliModify.innerText = 'hi!';
+
+          actual.replaceChild(aliModify, actual.firstChild);
+
           // write me! (... without using cloneNode, that's kind of cheating)
         </script>
       </div>

@@ -43,6 +43,25 @@
           'use strict';
           debugger;
 
+          const header = document.createElement('h2');
+          header.innerText = 'a list of things';
+
+          const parent = document.getElementById('actual');
+          parent.insertBefore(header, parent.firstChild);
+
+          const list = document.createElement('ul');
+          list.innerHTML = `
+          <li>robots</li>
+            <li>solar systems</li>
+            <li>
+              <a href="https://www.badgerbadgerbadger.com" expected="_blank"
+                >learn about badgers</a
+              >
+            </li>
+            <li>oil</li>
+          `;
+          document.getElementById('actual').append(list);
+
           // write me! (... without using cloneNode, that's kind of cheating)
         </script>
       </div>

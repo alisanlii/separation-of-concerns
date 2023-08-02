@@ -39,6 +39,11 @@
         <script id="dom-manipulation-script">
           'use strict';
           debugger;
+          const actual = document.createElement('a');
+          actual.href = 'https://www.youtube.com/watch?v=0ik6X4DJKCc';
+          actual.innerText = 'Mr. Traversy does it again!';
+          actual.target = '_blank';
+          document.getElementById('actual').children[0].append(actual);
 
           // write me! (... without using cloneNode, that's kind of cheating)
         </script>
